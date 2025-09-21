@@ -1,0 +1,18 @@
+positive assertions:
+assert_equal()
+assert_true
+assert_in
+assert_element_present
+asser_element_visible
+assert_attribute
+
+diff  bw assert_element_visible and assert_element_present
+visible will check the visibility of the element on the page
+present will check if the element is present in the DOM
+
+assert_in to test the partial text
+assert_attribute
+
+# negative assertions:
+assert_not_equal()
+assert_false
