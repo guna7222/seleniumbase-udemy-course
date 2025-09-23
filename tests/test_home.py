@@ -21,8 +21,9 @@ class TestHomePage(BaseCase):
         # verify the text
         self.assert_text_visible("Showing Results for Lenovo")
         
-    def test_2_position_is_products_or_not_in_the_navigation(self, expected_nav_products = ["Home", "Products", "About Us", "Contact", "Upload"] ):
+    def test_2_position_is_products_or_not_in_the_navigation(self):
         home_page = HomePage(self)
+        expected_nav_products = ["Home", "Products", "About Us", "Contact", "Upload"]
         home_page.navigation_bar_items(expected_nav_products)
 
     def test_about_us_page_url(self):
