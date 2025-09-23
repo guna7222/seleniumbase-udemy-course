@@ -16,3 +16,7 @@ assert_attribute
 # negative assertions:
 assert_not_equal()
 assert_false
+
+page object model is a design pattern that is used to separate selectors and test scripts,
+and also it improves code reusability and maintainability.
+

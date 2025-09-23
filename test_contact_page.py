@@ -14,3 +14,11 @@ class TestContactPage(BaseCase):
         self.click(".submit")
         # verify success message after submitting the form
         self.assert_text("Message sent successflly", ".react-toast-notifications__toast__content.css-1ad3zal")
+        self.assert_element_not_visible('[class*="error"]')
+
+    def test_submit_get_in_touch_form_with_out_input(self):
+        self.open("https://practice-react.sdetunicorns.com/contact")
+        self.click(".submit")
+        errors = self.find_elements('[class*="error"]')
+        self.assert_equal(len(errors), 4)
+        
