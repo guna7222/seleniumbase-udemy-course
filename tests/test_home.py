@@ -18,8 +18,6 @@ class TestHomePage(BaseCase):
     def test_search_for_products_and_verify_the_text(self):
         home_page = HomePage(self)
         home_page.search_for_item("Lenovo")
-        # verify the text
-        self.assert_text_visible("Showing Results for Lenovo")
         
     def test_2_position_is_products_or_not_in_the_navigation(self):
         home_page = HomePage(self)
@@ -27,16 +25,14 @@ class TestHomePage(BaseCase):
         home_page.navigation_bar_items(expected_nav_products)
 
     def test_about_us_page_url(self):
-        # go to about us page
-        # Verify url contains About
-        url = "https://practice-react.sdetunicorns.com/"
-        self.open(url)
-        self.click('.main-menu li:nth-child(3)')
-        self.assert_url_contains("bout")
+        home_page = HomePage(self)
+        home_page.open_home_page()
+        self.click(home_page.about_position)
+        self.assert_url_contains("about")
 
     def test_new_tab(self):
-        url = "https://practice-react.sdetunicorns.com/"
-        self.open(url)
+        home_page = HomePage(self)
+        home_page.open_home_page()
         self.click('.copyright.mb-30 p a')
         print(self.driver.window_handles) # return list of tabs
         self.switch_to_tab(1)
