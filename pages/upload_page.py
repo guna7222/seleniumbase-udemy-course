@@ -1,4 +1,6 @@
 import os.path
+from config.default import BASE_URl
+
 
 class UploadPage:
 
@@ -7,13 +9,12 @@ class UploadPage:
         self.file_input_selector = ".single input"
         self.verify_preview = ".preview img"
         self.upload_button = ".btn.btn-primary"
-        self.url = "https://practice-react.sdetunicorns.com/upload"
         self.multiple_files_selector = ".multiple input"
         self.preview_multiple = ".preview"
 
     # page helper
     def open_upload_page(self):
-        self.sb.open(self.url)
+        self.sb.open(f"{BASE_URl}/upload")
 
     def upload_single_file(self):
         # file path

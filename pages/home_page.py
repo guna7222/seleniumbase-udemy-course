@@ -1,9 +1,9 @@
+from config.default import BASE_URl
 
 class HomePage:
 
     def __init__(self, sb):
         self.sb = sb
-        self.url = "https://practice-react.sdetunicorns.com/"
         self.search_icon = "button[class='search-active']"
         self.search_field = "input[type='text']"
         self.search_button = ".button-search"
@@ -11,7 +11,7 @@ class HomePage:
 
     # homepage helper
     def open_home_page(self):
-        self.sb.open(self.url)
+        self.sb.open(BASE_URl)
         self.sb.maximize_window()
 
     # search item helper

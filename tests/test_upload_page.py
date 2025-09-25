@@ -27,5 +27,3 @@ class TestUploadPage(BaseCase):
 
         self.click(upload_page.upload_button)
         self.assert_text_visible("Images uploaded successfully")
-
-

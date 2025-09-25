@@ -20,3 +20,7 @@ assert_false
 page object model is a design pattern that is used to separate selectors and test scripts,
 and also it improves code reusability and maintainability.
 
+pytest -k "test_search_for_products_and_verify_the_text" --settings=custom_settings.py
+
+Flake 8 code linter
+
