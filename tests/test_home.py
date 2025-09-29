@@ -4,10 +4,12 @@ from pages.home_page import HomePage
 
 class TestHomePage(BaseCase):
 
+    def setUp(self):
+        super().setUp()
+        self.home_page = HomePage(self)
+        self.home_page.open_home_page()
+
     def test_verify_page_title_and_url(self):
-        home_page = HomePage(self)
-        # open home page
-        home_page.open_home_page()
         # check the title
         # self.assert_title_contains("SDET Unicorns")
         self.assert_title("Practice with React | SDET Unicorns Test Site")
@@ -16,24 +18,20 @@ class TestHomePage(BaseCase):
         self.assert_url("https://practice-reac.sdetunicorns.com/")
 
     def test_search_for_products_and_verify_the_text(self):
-        home_page = HomePage(self)
-        home_page.search_for_item("Lenovo")
+
+        self.home_page.search_for_item("Lenovo")
 
     def test_2_position_is_products_or_not_in_the_navigation(self):
-        home_page = HomePage(self)
         expected_nav_products = ["Home", "Products", "About Us", "Contact", "Upload"]
-        home_page.navigation_bar_items(expected_nav_products)
+        self.home_page.navigation_bar_items(expected_nav_products)
 
     def test_about_us_page_url(self):
-        home_page = HomePage(self)
-        home_page.open_home_page()
-        self.click(home_page.about_position)
+
+        self.click(self.home_page.about_position)
         self.assert_url_contains("about")
 
     def test_new_tab(self):
-        home_page = HomePage(self)
-        home_page.open_home_page()
-        self.click('.copyright.mb-30 p a')
+        self.click(".copyright.mb-30 p a")
         print(self.driver.window_handles)  # return list of tabs
         self.switch_to_tab(1)
         print(self.driver.window_handles)

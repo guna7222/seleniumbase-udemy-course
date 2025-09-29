@@ -24,3 +24,20 @@ pytest -k "test_search_for_products_and_verify_the_text" --settings=custom_setti
 
 Flake 8 code linter
 
+#  code formatter (black)
+pipenv run pip install black
+pipenv run pip install flake8
+
+Data driven testing (running the same test with different sets of data)
+
+# running individual files
+pytest tests/test_home.py
+
+# running individual tests with testname
+pytest -k "test_name"
+pytest -k classname
+pytest -k test_upload_(takes regrex pattern)
+
+pytest tests/test_home.py::TestHomePage::test_name
+
+pytest /tests test_home.py tests/test_upload_page.py
