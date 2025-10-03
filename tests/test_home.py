@@ -1,3 +1,4 @@
+import pytest
 from seleniumbase import BaseCase
 from pages.home_page import HomePage
 
@@ -9,6 +10,7 @@ class TestHomePage(BaseCase):
         self.home_page = HomePage(self)
         self.home_page.open_home_page()
 
+    @pytest.mark.smoke
     def test_verify_page_title_and_url(self):
         # check the title
         # self.assert_title_contains("SDET Unicorns")

@@ -41,3 +41,22 @@ pytest -k test_upload_(takes regrex pattern)
 pytest tests/test_home.py::TestHomePage::test_name
 
 pytest /tests test_home.py tests/test_upload_page.py
+
+
+groups
+@pytest.mark.group_name  (pyest -m smoke)
+pytest -m "smoke or regression"
+
+exclude test
+pytest tests/test_upload_page.py -m "not long_running_test"
+pytest -m "smoke and not long_running_test"
+
+# parallel testing -n flag
+pytest tests/test_home.py -n=6
+
+Cross browser testing
+--browser=edge
+--browser=safari
+
+headless browser testing
+

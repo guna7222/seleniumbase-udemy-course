@@ -1,4 +1,4 @@
-import os.path
+import pytest
 
 from seleniumbase import BaseCase
 from pages.upload_page import UploadPage
@@ -15,6 +15,7 @@ class TestUploadPage(BaseCase):
         self.upload_page.upload_single_file()
         self.assert_text_visible("Image uploaded successfully")
 
+    @pytest.mark.long_ruuning_test
     def test_upload_multiple_files(self):
 
         # file paths
