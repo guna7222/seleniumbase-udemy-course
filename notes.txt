@@ -60,3 +60,23 @@ Cross browser testing
 
 headless browser testing
 
+demo mode and sleep mode
+
+pytest -k "test_name" --demo
+
+trace mode
+
+pytest -k "test_name" --trace
+n(next) c(continue) s(step) u(up) d(down)
+
+reporting
+1) auto generated logs  (--archive-logs) stores logs
+2) Dashboard
+3) pytest report
+
+2) Dashboard (--dashboard)  pytest tests/test_home.py --dashboard
+
+running the dashboard server
+python -m http.server 1948  (http://localhost:1948/dashboard.html)
+
+3) pytest detailed report

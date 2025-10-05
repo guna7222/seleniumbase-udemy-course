@@ -7,7 +7,7 @@ class TestDemoPage(BaseCase):
         url = "https://seleniumbase.io/demo_page"
         self.open(url)
         # before state
-        self.assert_attribute("#progressBar", "value", "50")
+        self.assert_attribute("#progressBar", "value", "60")
         # change the slider value
         self.set_value("#mySlider", "80")
         # after state
