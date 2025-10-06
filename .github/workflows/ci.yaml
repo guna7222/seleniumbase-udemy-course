@@ -44,7 +44,12 @@ jobs:
     - name: Install ChromeDriver via SeleniumBase
       run: |
         pipenv run seleniumbase install chromedriver
-
+    - name: Run Linter
+      run: |
+        pipenv run flake8 tests/
+    - name: Run Space Formatter
+      run: |
+        pipenv run black tests/
     - name: Run tests (headless Chrome)
       run: |
         pipenv run pytest tests/test_home.py --browser=chrome --headless -v -s
