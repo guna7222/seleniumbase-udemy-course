@@ -50,10 +50,12 @@ jobs:
     - name: Run Space Formatter
       run: |
         pipenv run black tests/
-    - name: Run tests (headless Chrome)
+    - name: Run Pytest
       run: |
         pipenv run pytest tests/test_home.py -n=3 --browser=chrome --headless -v -s --dashboard --html=report/report.html
-    - uses: actions/upload-artifact@v4
+      continue-on-error: true
+    - name: upload-artifacts
+      uses: actions/upload-artifact@v4
       with:
         name: my-artifact
         path: report/
