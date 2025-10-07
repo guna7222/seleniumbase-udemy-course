@@ -1,0 +1,27 @@
+different ways to send data to api endpoints
+
+URL Parameters or query parameters(example.com/api?data=value&name=sekhar) (commonly used in get requests)
+form data
+JSON data {"data":"value"}
+Files
+XML (not the best)
+
+Request Components
+methods (GET, POST, PUT, DELETE, PATCH)
+
+headers is used to send additional information with the request
+body (data to be sent to the server)
+
+authentication (to verify the identity of the user making the request)
+
+response from the server
+data
+status code
+headers type (json)
+
+status code
+1xx (informational)
+2xx (successful)
+3xx (redirection)
+4xx (client error)
+5xx (server error)
