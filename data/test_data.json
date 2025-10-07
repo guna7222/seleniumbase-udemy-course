@@ -1,0 +1,13 @@
+{
+  "login_successful_test_data" : [
+    {
+      "username" : "practice",
+      "password" : "SuperSecretPassword!"
+    },
+    {
+      "username" : "wrongUser",
+      "password" : "SuperSecretPassword!"
+    }
+
+  ]
+}

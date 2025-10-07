@@ -80,3 +80,21 @@ running the dashboard server
 python -m http.server 1948  (http://localhost:1948/dashboard.html)
 
 3) pytest detailed report
+
+
+# pytest overview
+1) simple syntax
+2) fixtures for setUp and teardown
+3) Parameterization
+4) strong assertions
+5) Markers and tags
+6) integration with other tools
+
+why seleniumbase
+1) simplified code structure
+2) Integrated test framework
+3) enhanced waiting mechanism
+4) improves debugging
+5) advanced reporting mechanism
+6) parallel execution
+7) test recorder (will record the test and based on that it will generate the test case)
