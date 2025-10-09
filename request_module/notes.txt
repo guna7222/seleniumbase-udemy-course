@@ -25,3 +25,21 @@ status code
 3xx (redirection)
 4xx (client error)
 5xx (server error)
+
+
+installing request module
+- pip install requests
+
+requests documentation
+- https://docs.python-requests.org/en/latest/
+
+tools for request
+- https://reqres.in
+
+http bin
+- https://httpbin.org (used to test the request)
+
+request bin
+- https://requestb.in (used to debug the request)
+
+# custom headers
